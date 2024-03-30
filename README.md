@@ -54,7 +54,7 @@ Note: I ran into an issue using the Youtube loader, perhaps because now youtube 
 
 Usually, once we have loaded our data and have it ready to be used, we need to do a bit more steps, such as transform it into smaller chunks, so it can fit the model context window, or perhaps you wish to do certain transformations before passing it to the model like filtering. 
 
-Those are the differen [text splitters](https://python.langchain.com/docs/modules/data_connection/document_transformers/#types-of-text-splitters) supported by LangChain
+Those are the different [text splitters](https://python.langchain.com/docs/modules/data_connection/document_transformers/#types-of-text-splitters) supported by LangChain
 
 On this lesson, the facilitator walks us through 2 main splitters: 
 
