@@ -4,6 +4,37 @@ This repository is based on the deeplearning.ai course [Chat with your data](htt
 
 The purpose of the course is to show you how you can build applications using LangChain, OpenAI embeddings, vector store such as Chroma DB to be able to "chat" with your own data.
 
+# How to run the repository
+
+1. Install poetry 
+
+    ```
+    curl -sSL https://install.python-poetry.org | python3 -
+    ```
+
+2. Clone the repository 
+
+    ```
+    git clone https://github.com/laurauzcategui/chat_with_your_data.git
+
+    cd chat_with_your_data
+    ```
+
+3. Enable the environment 
+
+    ```
+    poetry install 
+    poetry shell
+    ```
+
+4. Run jupyter
+
+    ```
+    jupyter notebook 
+    ```
+
+Note: All the relevant notebooks are in: `/src`
+
 ----
 # Lessons 
 
