@@ -94,3 +94,20 @@ Meanwhile this idea seems enticing, imaging you have thousands of documents refe
 Yet another one to look out if you are querying super large content is to use Contextual Compression retrievers, where instead of pasing the full doc to the app, you pass it to a base retriever that will fetch the more relevant documents to then compressed the info with the bits and pieces you need.
 
 At the end of the lecture, the facilitator talks about other types of retrievers, such as using SVM, TF-IDF techniques which of course do not use semantic search. 
+
+## Lesson 5 - Question answering 
+
+This lesson was based on the final building block of the course which is using LLMs to answer questions based on what we have seen before, embeddings and retrievers, where the LLM just take the info from the retrievers as context and it's able to form an answer to the question. 
+
+It's important to highlight here the usage of RetrievalQA chain. There are multiple [chains](https://python.langchain.com/docs/modules/chains) that can be used with Langchain and its worth giving it a read for the different use cases that it can support. 
+
+On this particular case, you can either, pass directly a question along with the retriever and the llm or you can form a Prompt template to give specific instructions to the llm about how it should read and response. 
+
+On the other hand, there is a parameter to be able to use different different chain types. For example: map_reduce and refine. 
+
+What each of this chain_types does? 
+- map_reduce: this is a two step process, first the chain applies LLM chain to each document ( map step) and then it pass all documents to combine them a produce and output ( reduce step )
+- refine: this is an incremental production of the output, where the chain takes the documents and generates an initial answer based on the first doc, then loops on the remaining ones to refine the answer. This process is sequential as the building ocurss upon the previous one. 
+
+Limitations of the chains ? 
+- They do not have memory. Which will be seen on the last lesson. 
