@@ -18,6 +18,8 @@ pydub = "^0.25.1"
 tiktoken = "^0.6.0"
 chroma = "^0.2.0"
 chromadb = "^0.4.24"
+lark = "^1.1.9"
+scikit-learn = "^1.4.1.post1"
 
 
 [build-system]

@@ -76,3 +76,21 @@ Well, after you have all your vectors indexed into a vector store you can start 
 - What is the most basic algorithm in Machine learning? 
 
 and the vector store will retrieve the top N vectors that are most similar to the question being asked.
+
+## Lesson 4 - Retrievers
+
+Oh right! This lesson was a bit of fun, where you are not only working with Vector stores and Embeddings, but how to retrieve the information and pass it to a Language model to give you more contextualized responses. 
+
+First, it starts by showing there are other ways to search, meaning you can use other techniques different than similarity. On this particular case, we can observe Maximum marginal relevance (MMR). 
+
+> MMR algorithm looks at the pool of all possible results and first picks the one most relevant to your query. Then, for the next pick, it not only considers how relevant another piece of information is but also how different it is from what's already been selected
+
+On lesson 3, we have found some pitfalls and errors, those can be solved using retrievers with metadata. 
+
+For example, when asking about lecture 3, instead of just querying, you can also filter by particular metadata. On this particular case the source ( lecture3.pdf ) 
+
+Meanwhile this idea seems enticing, imaging you have thousands of documents referring to lecture 3, you don't want do it by hand, instead you use a self-query retriever where you pass the metadata info to retriever or filter by, in this case the source and the page from the lecture.
+
+Yet another one to look out if you are querying super large content is to use Contextual Compression retrievers, where instead of pasing the full doc to the app, you pass it to a base retriever that will fetch the more relevant documents to then compressed the info with the bits and pieces you need.
+
+At the end of the lecture, the facilitator talks about other types of retrievers, such as using SVM, TF-IDF techniques which of course do not use semantic search. 
