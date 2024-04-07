@@ -4,7 +4,10 @@ This repository is based on the deeplearning.ai course [Chat with your data](htt
 
 The purpose of the course is to show you how you can build applications using LangChain, OpenAI embeddings, vector store such as Chroma DB to be able to "chat" with your own data.
 
-# How to run the repository
+# Demo app 
+![Alt Text](./src/assets/demo.gif)
+
+# How to setup the app
 
 1. Install poetry 
 
@@ -34,6 +37,30 @@ The purpose of the course is to show you how you can build applications using La
     ```
 
 Note: All the relevant notebooks are in: `/src`
+
+# How to run the demo? 
+
+ After you have followed the setup steps above, all except the `jupyter` command, you can run the Demo  and play with it by following the next steps: 
+
+ 1. Create a `.env` file under the root of your repo
+
+    Set the content to be your OPENAI API key. It should look like this: 
+
+    ```
+    OPENAI_KEY=sk-
+    ```
+
+2. Run the demo
+
+    From the root of your repo
+
+    ```
+    cd src 
+    python app.py
+    ```
+
+3. Boom :) Have fun!
+
 
 ----
 # Lessons 
@@ -111,3 +138,26 @@ What each of this chain_types does?
 
 Limitations of the chains ? 
 - They do not have memory. Which will be seen on the last lesson. 
+
+## Lessson 6 - Chat with your data
+
+Fresh out of the oven I could get this one up and running! :-) 
+
+This one is a summary of all the content of the course in just one go where you could build out an end to end application. 
+
+Basically, you load a PDF and it gets splitted into chunks as well as passed through embeddings to be able to generate the retriever. 
+
+Later on, you can ask questions, and it will give you answers based on the PDF file generated and it will output the answers in reply to the user. 
+
+Tips from this lesson: 
+- I've modified the App to be able to run it using Chat Feed provided natively by Panel
+- You can upload any data in PDF you might have and ask questions about it 
+- Be mindful that while this use OpenAI, those actions using embeddings and chat models cost money $$$. 
+
+
+## What next? 
+- Explore using other models such as Mistral 
+- Expand to use other types of files, such as, csv 
+- Expand to upload multiple files at once 
+
+
